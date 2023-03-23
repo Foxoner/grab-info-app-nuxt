@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    top: 0;
+    left: 0;
+}
+body {
+    @apply bg-gray-50 text-[#0e1213c7];
+    font-family: 'Nunito', sans-serif;
+
+}
+#__nuxt {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+h2 {
+    @apply text-2xl font-semibold;
+}
+p {
+    @apply italic;
+}
+
+@layer components {
+    .btn {
+        @apply bg-[#2bddf5] text-black px-3 py-2 rounded-md text-sm hover:bg-[#18a2b4];
+    }
+}
