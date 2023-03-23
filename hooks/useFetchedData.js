@@ -8,9 +8,9 @@ export function useFetchedData(code) {
 
     async function useAxiosData(code, string){
         await Promise.allSettled([
-            axios.get(`https://postalcode.parseapi.com/api/fd12434ee7438ea0d3812760835c6798/${code}`),
-            axios.get(`https://useragent.parseapi.com/api/fd12434ee7438ea0d3812760835c6798/` + string),
-            axios.get(`https://ip-api.com/json/`)
+            axios.get(`http://postalcode.parseapi.com/api/fd12434ee7438ea0d3812760835c6798/${code}`),
+            axios.get(`http://useragent.parseapi.com/api/fd12434ee7438ea0d3812760835c6798/` + string),
+            axios.get(`http://ip-api.com/json/`)
 
         ])
         .then(results => {
