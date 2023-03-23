@@ -6,31 +6,31 @@
             <div class="card location p-2 border rounded m-2">
                 <h2>Location Data:</h2>
                 <div v-if="locationExist.value">
-                    <p>Continent: {{ pageCodeData.value.data?.continent?.name }}</p>
-                    <p>Country: {{ pageCodeData.value.data?.country?.name}}</p>
-                    <p>State: {{ pageCodeData.value.data?.state?.name }}</p>
-                    <p>City: {{ pageCodeData.value.data?.city?.name }}</p>
-                    <p>ZIP Code: {{ pageCodeData.value.data?.code?.name }}</p>
+                    <p>Continent: {{ pageCodeData?.value?.data?.continent?.name }}</p>
+                    <p>Country: {{ pageCodeData?.value?.data?.country?.name}}</p>
+                    <p>State: {{ pageCodeData?.value?.data?.state?.name }}</p>
+                    <p>City: {{ pageCodeData?.value?.data?.city?.name }}</p>
+                    <p>ZIP Code: {{ pageCodeData?.value?.data?.code?.name }}</p>
                 </div>
                 <div v-else>
-                    <p >{{ pageCodeData.value?.data }}</p>
+                    <p >{{ pageCodeData?.value?.data }}</p>
                 </div>
             </div>
             <div class="card useragent p-2 border rounded m-2">
                 <h2>UserAgent:</h2>
-                <p>Browser: {{ pageUserData.value?.name }}</p>
-                <p>Device-desktop: {{ pageUserData.value?.device?.type }}</p>
-                <p>OS: {{ pageUserData.value.os?.name }} {{ pageUserData.value.os?.version }}</p>
+                <p>Browser: {{ pageUserData?.value?.name }}</p>
+                <p>Device-desktop: {{ pageUserData?.value?.device?.type }}</p>
+                <p>OS: {{ pageUserData?.value.os?.name }} {{ pageUserData?.value.os?.version }}</p>
             </div>
             <div class="card extra p-2 border rounded m-2">
                 <h2>Referrer:</h2>
                 <p>{{ myReferrer }}</p>
                 <h2>IP Data:</h2>
-                <p>Country: {{ pageIpData.value?.country }}</p>
-                <p>Country-code: {{ pageIpData.value?.countryCode }}</p>
-                <p>Region-name: {{ pageIpData.value?.regionName }}</p>
-                <p>City: {{ pageIpData.value?.city }}</p>
-                <p>User IP: {{ pageIpData.value?.query }}</p>
+                <p>Country: {{ pageIpData?.value?.country_name }}</p>
+                <p>Country-code: {{ pageIpData?.value?.country_code }}</p>
+                <p>Region-name: {{ pageIpData?.value?.region }}</p>
+                <p>City: {{ pageIpData?.value?.city }}</p>
+                <p>User IP: {{ pageIpData?.value?.ip }}</p>
                 <h2>UTM tags:</h2>
                 <p>{{ pageUTMtags }}</p>
             </div>
@@ -38,7 +38,7 @@
         <div class="container-2 shadow-lg w-5/6 rounded-md mx-auto flex mt-7 p-2 flex-wrap justify-center bg-[#8a99996b]" v-else>
             <div class="card location p-2 border rounded m-2">
                 <h2>Location Data:</h2>
-                <p>{{ pageCodeData.value.data }}</p>
+                <p>{{ pageCodeData?.value?.data }}</p>
             </div>
             <div class="card useragent p-2 border rounded m-2">
                 <h2>UserAgent:</h2>
