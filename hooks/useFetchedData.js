@@ -10,7 +10,7 @@ export function useFetchedData(code) {
         await Promise.allSettled([
             axios.get(`https://postalcode.parseapi.com/api/fd12434ee7438ea0d3812760835c6798/${code}`),
             axios.get(`https://useragent.parseapi.com/api/fd12434ee7438ea0d3812760835c6798/` + string),
-            axios.get(`http://ip-api.com/json/`)
+            axios.get(`https://ip-api.com/json/`)
 
         ])
         .then(results => {
